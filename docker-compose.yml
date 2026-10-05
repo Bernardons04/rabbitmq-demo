@@ -1,0 +1,22 @@
+services:
+  postgres:
+    image: postgres:16
+    container_name: rabbitmq-demo-postgres
+    environment:
+      POSTGRES_USER: rabbitmq-demo
+      POSTGRES_PASSWORD: rabbitmq-demo
+      POSTGRES_DB: rabbitmq-demo
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+
+  rabbitmq:
+    image: rabbitmq:4-management
+    container_name: rabbitmq-demo-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+
+volumes:
+  postgres_data:

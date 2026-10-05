@@ -1,0 +1,26 @@
+{
+  "name": "rabbitmq-demo",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "api": "tsx src/api/server.ts",
+    "worker": "tsx src/worker/worker.ts",
+    "build": "tsc"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/amqplib": "^0.10.8",
+    "@types/node": "^26.6.4",
+    "@types/pg": "^8.23.1",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  },
+  "dependencies": {
+    "amqplib": "^2.2.0",
+    "pg": "^8.23.1"
+  }
+}
