@@ -1,1 +1,0 @@
-import "./rabbitmq/connection.js";
